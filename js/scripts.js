@@ -27,17 +27,19 @@ $(function () {
         }, 2000)
     }
 
-    carregarDinamico();
+    //carregarDinamico();
 
-    function carregarDinamico() {
-        $("[realtime]").click(function () {
-            var pagina = $(this).attr('realtime');
-            $('.conteiner-principal').hide();
-            $('.conteiner-principal').load(INCLUDE_PATH+'pages/'+pagina+'.php');
-            $('.conteiner-principal').fadeIn(2000)
-            return false;
-        })
-    }
+    // function carregarDinamico() {
+    //     $("[realtime]").click(function () {
+    //         var pagina = $(this).attr('realtime');
+    //         $('.conteiner-principal').hide();
+    //         $('.conteiner-principal').load(INCLUDE_PATH+'pages/'+pagina+'.php');
+    //         $('.conteiner-principal').fadeIn(2000)
+    //         return false;
+    //     })
+    // }
+
+    
 
 })
 

@@ -96,6 +96,12 @@ include('inclusao_mensagem.php');
         <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
 
     <?php } ?>
+    <?php
+    if ($url == 'Contato') { ?>
+
+        <script src="<?php echo INCLUDE_PATH; ?>js/textWrite.js"></script>
+
+    <?php } ?>
 </body>
     <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
 

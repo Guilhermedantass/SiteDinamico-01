@@ -293,11 +293,48 @@ section.extras li{
 
 /* -> Contato<-*/
 
-section.contato{
+section.banner-contato{
     background-image: url(../images/bg-form.jpg);
+    width: 100%;
+    height: 600px;
+    background-size:cover;
+    position: relative;
+}
+
+
+.banner-contato-conteiner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#title-contato{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+}
+
+#title-contato::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca{
+    0%, 100% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+
+section.contato{
     min-height: 600px;      
     background-size:cover ;
-    padding: 40px 0;
+    padding: 60px 0;
 
 }
 
@@ -306,7 +343,7 @@ section.contato .center{
 }
 
 section.contato .conteiner-contato{
-    background-color: rgba(51, 51, 51,  0.3);
+    background-color: rgba(0, 0, 0,  0.3);
     border-radius: 10px;
 }
 
