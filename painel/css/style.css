@@ -92,7 +92,7 @@ div.menu{
     float: left;
     width: 300px;
     background-color: rgba(74, 74, 128, 0.8);
-    padding: 10px;
+    padding-top: 10px;
     position: fixed;
     left: 0;
     top: 0;
@@ -126,6 +126,7 @@ div.menu{
     height: 130px;
     border-radius: 50%;
     display: inline-block;
+    border: 1px solid #B4B4CC;
     
 }
 
@@ -195,14 +196,88 @@ header{
     padding: 10px;
     
 }
+.itens-menu{
+    margin-top: 30px;
+}
+.itens-menu h2{
+    text-align: left;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: #2C2C4D;
+    color: white;
+    padding: 8px;
+}
 
-.box-content{
+.itens-menu a{
+    font-weight: 300;
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid #2C2C4D ;
+}
+
+ .box-content{
     background-color: white;
     padding: 10px;
     margin-bottom: 10px;
 }
+.box-content h2{
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.box-metricas{
+	margin-top:16px;
+	padding:0 15px;
+}
+
+.box-metrica-single{
+	float: left;
+	position: relative;
+	width: 33.3%;
+	background: #F4B03E;
+	border: 5px solid white;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(2){
+	background: #E05C4E;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(3){
+	background: #0091ea;
+}
+
+.box-metrica-wraper{
+	padding: 10px 20px;
+	text-align: left;
+	color: white;
+    
+}
+
+.box-metrica-wraper h2{
+	font-size: 20px;
+    font-weight: 300;
+}
+
+.box-metrica-wraper p{
+	padding: 10px 0;
+	font-size: 16px;
+    font-weight: 300;
+}
+@media screen and (max-width: 1200px) {
+    .box-metrica-single{
+        min-height: 100px;
+    } 
+}
 
 
+@media screen and (max-width: 1024px) {
+    .box-metrica-single{
+        width: 100%;
+    } 
+}
 
 
 @media screen and (max-width: 768px) {
@@ -223,7 +298,7 @@ header{
 @media screen and (max-width: 400px) {
     .menu-wraper{
         width: 200px;
-    }
+    } 
 }
 
 
