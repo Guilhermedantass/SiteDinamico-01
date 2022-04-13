@@ -9,8 +9,8 @@ html, body{
     height: 100%;
     background-color: rgb(225, 225, 255);
 }
-a{
-    
+body{
+    overflow-x: hidden;
 }
 
 
@@ -81,13 +81,21 @@ a{
     margin: 0 auto;
 }
 
+.menu-wraper{
+    width: 300px;
+}
+
 div.menu{
+    overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
     float: left;
     width: 300px;
     background-color: rgba(74, 74, 128, 0.8);
     padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 .box-usuario{
     text-align: center;
@@ -97,6 +105,7 @@ div.menu{
     text-align: left;
     width: 130px;
     height: 130px;
+
     border-radius: 50px;
     display: inline-block;
     border: 1px solid #B4B4CC;
@@ -111,10 +120,19 @@ div.menu{
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+.img-usuario img{
+    text-align: left;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
 
 
 header{
-    float: left;
+    position: relative;
+    left: 300px;
     padding: 20px 0;
     background-color: #2C2C4D;
     width: calc(100% - 300px);
@@ -122,13 +140,15 @@ header{
 
 .loggout{
     float: right;
+    margin-top: 2px;
 
 }
 
 .loggout a{
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
+
 }
 
 .menu-btn{
@@ -150,3 +170,60 @@ header{
     font-size: 15px;
     font-weight: 300;
 }
+
+
+
+/*-> content <-*/
+.w100{
+    width: 100%;
+}
+.w50 {
+    width: 49%;
+}
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.content{
+    width: calc(100% - 300px);
+    position: relative;
+    left: 300px;
+    padding: 10px;
+    
+}
+
+.box-content{
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+   
+    .content{
+        width: 100%;
+        left: 0;
+    }
+    header{
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menu-wraper{
+        width: 200px;
+    }
+}
+
+

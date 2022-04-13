@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>estilo/all.min.css"> 
-    <link rel="stylesheet" href="<?php INCLUDE_PATH_PAINEL; ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +21,13 @@
             $sql->execute(array($user, $password));
 
             if($sql->rowCount() == 1){
+                $info = $sql->fetch();
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $user;
                 $_SESSION['password'] = $password;
+                $_SESSION['cargo'] = $info['cargo'];
+                $_SESSION['nome'] = $info['nome'];
+                $_SESSION['img'] = $info['img'];
 
                 header('location: '.INCLUDE_PATH_PAINEL);
                 die();

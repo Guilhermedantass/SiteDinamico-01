@@ -14,4 +14,17 @@
     define('DB','sitedinamico');
     define('USER','root');
     define('PASS','');
+
+
+    /*   */
+
+    function pegaCargo($cargo){
+        $arr = [
+            '0' => 'Normal',    
+            '1' => 'Sub Administrador',
+            '2' => 'Administrador',
+        ];
+
+        return $arr[$cargo];
+    }
 ?>
