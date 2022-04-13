@@ -1,3 +1,10 @@
+<?php
+    if(isset($_GET['loggout'])){
+        Painel::loggout();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
