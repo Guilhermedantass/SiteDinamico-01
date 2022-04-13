@@ -87,7 +87,31 @@ div.menu{
     float: left;
     width: 300px;
     background-color: rgba(74, 74, 128, 0.8);
+    padding: 10px;
 }
+.box-usuario{
+    text-align: center;
+}
+
+.avatar-usuario{
+    text-align: left;
+    width: 130px;
+    height: 130px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px solid #B4B4CC;
+}
+
+.avatar-usuario i{
+    font-size: 50px;
+    color: #B4B4CC;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
 
 header{
     float: left;
@@ -104,4 +128,25 @@ header{
 .loggout a{
     color: white;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.menu-btn{
+    float: left;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.nome-usuario{
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.nome-usuario p{
+    color: white;
+    
+    font-size: 15px;
+    font-weight: 300;
 }

@@ -20,11 +20,26 @@
 
 <body>
 
-<div class="menu"></div>
+<div class="menu">
+    <div class="box-usuario">
+        <div class="avatar-usuario">
+            <i class="fa fa-user"></i>
+        </div> 
+        <div class="nome-usuario">
+            <p>Guilherme Dantas</p>
+            <p>Administrador</p>
+        </div>
+    </div>
+
+
+</div>
 <header>
     <div class="center">
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
         <div class="loggout"> 
-            <a href="<?php INCLUDE_PATH_PAINEL; ?>?loggout"> <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <a href="<?php INCLUDE_PATH_PAINEL; ?>?loggout"><span>Sair</span> <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
         </div>
         <div class="clear"></div>
     </div>
