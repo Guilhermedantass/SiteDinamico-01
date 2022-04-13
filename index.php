@@ -97,7 +97,7 @@ include('inclusao_mensagem.php');
 
     <?php } ?>
     <?php
-    if ($url == 'Contato') { ?>
+    if ($url == 'Contato' || $url == 'home' || $url == '') { ?>
 
         <script src="<?php echo INCLUDE_PATH; ?>js/textWrite.js"></script>
 

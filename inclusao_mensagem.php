@@ -1,5 +1,5 @@
 <?php
-    include('conexao.php');
+    include('classes/MySql.php');
 
     if (isset($_POST['acao'])) {
         # code...
@@ -9,7 +9,7 @@
         $telefone = $_POST['telefone'];
         $mensagem = $_POST['mensagem'];
 
-        $sql = $pdo->prepare("INSERT INTO `tb_mensagem` VALUES(NULL, ?,?,?,?,?)");
+        $sql = MySql::conectar()->prepare("INSERT INTO `tb_mensagem` VALUES(NULL, ?,?,?,?,?)");
 
         $sql->execute(array($nome,$sobrenome, $email, $telefone,$mensagem));
 

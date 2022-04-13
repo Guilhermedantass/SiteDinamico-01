@@ -8,4 +8,16 @@ function typeWrite(elemento){
 }
 
 const title = document.querySelector("#title-contato");
-typeWrite(title);
+
+const title_banner_conteiner = document.querySelector("#title-banner-conteiner");
+
+
+if (title == null) {
+    typeWrite(title_banner_conteiner);
+
+}else{
+    typeWrite(title);
+}
+
+
+

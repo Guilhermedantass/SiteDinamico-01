@@ -6,7 +6,7 @@
     <div class="center">
        
         <form action="" method="post">
-            <h2>Qual o seu melhor e-mail?</h2>
+            <h2 id='title-banner-conteiner'>Qual o seu melhor e-mail?</h2>
             <input type="email" name="email" required>
             <input type="submit" name="acao" value="Cadastrar!">
         </form>
