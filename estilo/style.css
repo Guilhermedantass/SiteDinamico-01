@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans';
-
 }
 
 a {
@@ -16,10 +15,10 @@ li {
     list-style: none;
 }
 
-input{
+input {
     border: 0;
-    
 }
+
 
 /* -> boot css <- */
 
@@ -28,6 +27,7 @@ input{
     padding: 0 2%;
     margin: 0 auto;
 }
+
 img {
     width: 100%;
     max-width: 400px;
@@ -57,14 +57,13 @@ img {
 
 /* -> estilização <- */
 
+
 /* -> Header <- */
 
 header {
     background-color: #262626;
     padding: 20px 0;
 }
-
-
 
 header .logo a {
     font-weight: 300;
@@ -94,16 +93,16 @@ nav.desktop a {
     color: white;
 }
 
+
 /* -> Banner Conteiner <- */
 
-.banner-conteiner{
+.banner-conteiner {
     width: 100%;
     height: 600px;
-    
     position: relative;
 }
 
-.banner-single{
+.banner-single {
     position: absolute;
     top: 0;
     left: 0;
@@ -115,17 +114,17 @@ nav.desktop a {
     display: none;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(51, 51, 51,  0.6);
+    background-color: rgba(51, 51, 51, 0.6);
     z-index: 2;
 }
 
-section.banner-conteiner form{
+section.banner-conteiner form {
     width: 93%;
     max-width: 600px;
     position: absolute;
@@ -136,20 +135,21 @@ section.banner-conteiner form{
     -ms-transform: translate(-50%, -50%);
 }
 
-section.banner-conteiner form h2{
+section.banner-conteiner form h2 {
     color: white;
     font-weight: 300;
     font-size: 30px;
     text-align: center;
 }
-#title-banner-conteiner::after{
+
+#title-banner-conteiner::after {
     content: '|';
     margin-left: 5px;
     opacity: 1;
     animation: pisca .7s infinite;
 }
 
-section.banner-conteiner form input[type=email]{
+section.banner-conteiner form input[type=email] {
     width: 100%;
     height: 66px;
     background: white;
@@ -159,7 +159,7 @@ section.banner-conteiner form input[type=email]{
     margin-top: 10px;
 }
 
-section.banner-conteiner form input[type=submit]{
+section.banner-conteiner form input[type=submit] {
     width: 100%;
     height: 66px;
     background: #2E4159;
@@ -171,225 +171,223 @@ section.banner-conteiner form input[type=submit]{
     font-size: 22px;
 }
 
-.bullets{
+.bullets {
     position: absolute;
-    z-index: 5; 
+    z-index: 5;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.bullets span{
+.bullets span {
     margin: 0 10px;
     display: inline-block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #444;  
-    
+    background-color: #444;
 }
 
-.bullets span.active-slider{
+.bullets span.active-slider {
     background-color: white;
 }
 
+
 /* -> Descrição Autor <- */
 
-section.descricao-autor{
+section.descricao-autor {
     padding: 40px 0;
 }
 
-section.descricao-autor h2{
+section.descricao-autor h2 {
     font-size: 28px;
     font-weight: 300;
     color: #444;
-
 }
 
-section.descricao-autor p{
+section.descricao-autor p {
     font-size: 16px;
     color: #444;
     margin-top: 10px;
     font-weight: 300;
 }
 
+
 /* -> Especialidades <-*/
 
-section.especialidades{
+section.especialidades {
     padding: 40px 0;
     background-color: #79C7FF;
 }
 
-section.especialidades .title{
+section.especialidades .title {
     color: white;
     font-weight: 300;
     text-align: center;
     font-size: 28px;
 }
 
-section.especialidades .box-especialidades{
+section.especialidades .box-especialidades {
     color: white;
     font-weight: 300;
-    padding: 40px 10px; 
+    padding: 40px 10px;
     text-align: center;
     opacity: 0;
 }
 
-section.especialidades .box-especialidades h4{
+section.especialidades .box-especialidades h4 {
     color: white;
     font-weight: 300;
     padding-bottom: 10px;
-    font-size: 25px ;
+    font-size: 25px;
 }
 
-section.especialidades .box-especialidades p{
+section.especialidades .box-especialidades p {
     color: white;
     font-weight: 300;
 }
 
-section.especialidades .box-especialidades h3 i{
+section.especialidades .box-especialidades h3 i {
     color: white;
     font-weight: 300;
     font-size: 40px;
     padding-bottom: 20px;
 }
 
+
 /* -> extras <-*/
 
-section.extras{
+section.extras {
     padding: 40px 0;
-    background-color: #618DE8 ;
+    background-color: #618DE8;
 }
 
-section.extras h2{
+section.extras h2 {
     color: aliceblue;
     font-weight: 400;
     font-size: 28px;
     padding-bottom: 20px;
 }
 
-section.extras .depoimento-single{
-   padding: 10px 0;
-   border-bottom: 1px solid white;
-  
+section.extras .depoimento-single {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
 }
 
-section.extras p{
+section.extras p {
     color: aliceblue;
     font-weight: 300;
     font-size: 16px;
-    text-align:justify;
+    text-align: justify;
     font-style: italic;
-    
 }
 
-section.extras p.nome-autor{
+section.extras p.nome-autor {
     font-weight: bold;
     font-style: normal;
-    
 }
 
-section.extras li{
+section.extras li {
     color: aliceblue;
     font-weight: 300;
     font-size: 16px;
     padding: 10px 0;
-    text-align:justify;
+    text-align: justify;
 }
+
 
 /* -> Contato<-*/
 
-section.banner-contato{
+section.banner-contato {
     background-image: url(../images/bg-form.jpg);
     width: 100%;
     height: 600px;
-    background-size:cover;
+    background-size: cover;
     position: relative;
 }
 
-
-.banner-contato-conteiner{
+.banner-contato-conteiner {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-#title-contato{
+#title-contato {
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
 }
 
-#title-contato::after{
+#title-contato::after {
     content: '|';
     margin-left: 5px;
     opacity: 1;
     animation: pisca .7s infinite;
 }
 
-@keyframes pisca{
-    0%, 100% {
+@keyframes pisca {
+    0%,
+    100% {
         opacity: 1;
     }
-    50%{
+    50% {
         opacity: 0;
     }
 }
 
-
-section.contato{
-    min-height: 600px;      
-    background-size:cover ;
+section.contato {
+    min-height: 600px;
+    background-size: cover;
     padding: 60px 0;
-
 }
 
-section.contato .center{
+section.contato .center {
     text-align: center;
 }
 
-section.contato .conteiner-contato{
-    background-color: rgba(0, 0, 0,  0.3);
+section.contato .conteiner-contato {
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 
-#titulo{
-    color:white;
+#titulo {
+    color: white;
     font-size: 30px;
     font-weight: 300;
     padding: 20px 0;
 }
-#subtitulo{
-    color:white;
+
+#subtitulo {
+    color: white;
     font-size: 20px;
     font-weight: 300;
 }
 
-section.contato form{
+section.contato form {
     padding-top: 40px;
 }
 
-
-.campo{
+.campo {
     display: inline-block;
     padding-left: 20px;
     padding-bottom: 20px;
 }
 
-.campo input{
+.campo input {
     width: 300px;
     height: 40px;
     padding-left: 10px;
     border-radius: 10px;
     font-size: 20px;
 }
-.mensagem{
+
+.mensagem {
     padding-left: 20px;
     padding-bottom: 20px;
 }
 
-.mensagem textarea{
+.mensagem textarea {
     width: 620px;
     height: 120px;
     padding-left: 10px;
@@ -399,12 +397,12 @@ section.contato form{
     resize: vertical;
 }
 
-.botao{
+.botao {
     padding-left: 20px;
     padding-bottom: 20px;
 }
 
-.botao input{
+.botao input {
     width: 300px;
     height: 40px;
     padding-left: 10px;
@@ -415,34 +413,52 @@ section.contato form{
     cursor: pointer;
 }
 
+
 /* -> Footer <-*/
 
-footer{
+footer {
     padding: 15px 0;
-    background-color:#000000;
+    background-color: #000000;
 }
 
-footer p{   
-    color:white;
+footer p {
+    color: white;
     text-align: center;
     font-weight: 300;
     font-size: 12px;
 }
 
-footer.fixed{
+footer.fixed {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
+section.error-404 {
+    height: 800px;
+}
+
+section.error-404 .esquerda {
+    height: 800px;
+}
+
+.img-conteiner {
+    position: absolute;
+}
+
+.img-404 {
+    position: relative;
+    left: 50%;
+    top: 50%;
+}
 
 @media screen and (max-width: 768px) {
-    .w50{
+    .w50 {
         float: none;
         width: 100%;
         padding: 20px;
     }
-    img{
+    img {
         display: block;
         margin: 0 auto;
         float: none !important;
@@ -450,23 +466,18 @@ footer.fixed{
 }
 
 @media screen and (max-width:700px) {
-    nav.desktop{
+    nav.desktop {
         display: none;
-        
-        
     }
-
-    .botao-menu-mobile{
+    .botao-menu-mobile {
         font-size: 24px;
         color: white;
         cursor: pointer;
     }
-    
-    nav.mobile{
+    nav.mobile {
         display: block;
     }
-
-    nav.mobile ul{
+    nav.mobile ul {
         top: 55px;
         z-index: 3;
         display: none;
@@ -475,8 +486,7 @@ footer.fixed{
         text-align: center;
         width: 100%;
     }
-
-    nav.mobile li{
+    nav.mobile li {
         display: block;
         width: 100%;
         background: white;
@@ -484,26 +494,22 @@ footer.fixed{
         border-bottom: 1px solid #ccc;
         padding: 8px 0;
         font-weight: 300;
-
     }
-    nav.mobile li a{
+    nav.mobile li a {
         display: block;
         font-size: 16px;
         color: #444;
-        
     }
-    
-    .w33{
+    .w33 {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 670px) {
-    .mensagem textarea{
+    .mensagem textarea {
         width: 300px;
         height: 160px;
         padding-left: 10px;
         border-radius: 10px;
     }
-    
 }

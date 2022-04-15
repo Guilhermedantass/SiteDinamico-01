@@ -1,5 +1,7 @@
-<section class="banner-contato">
+<section class="banner-contato" style="position: relative;">
     <div class="banner-contato-conteiner">
+        <!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
         <h1 id="title-contato">Entre em contato conosco!</h1>
     </div>
 </section>
@@ -33,7 +35,7 @@
                     </div>
                 </div>
                 <div class="mensagem">
-                   <textarea type="text" id="mensagem" name="mensagem" placeholder="Mensagem *" required></textarea>
+                    <textarea type="text" id="mensagem" name="mensagem" placeholder="Mensagem *" required></textarea>
                 </div>
                 <div class="botao">
                     <input type="submit" value="Enviar!" name="acao">

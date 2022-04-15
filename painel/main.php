@@ -4,7 +4,7 @@ if (isset($_GET['loggout'])) {
 
 }
 
-$nomeEmpresa = 'Guilherme';
+
 
 ?>
 
@@ -25,38 +25,38 @@ $nomeEmpresa = 'Guilherme';
 
     <div class="menu">
         <div class="menu-wraper">
-        <div class="box-usuario">
-            <?php if ($_SESSION['img'] == '') { ?>
+            <div class="box-usuario">
+                <?php if ($_SESSION['img'] == '') { ?>
                 <div class="avatar-usuario">
                     <i class="fa fa-user"></i>
                 </div>
-            <?php } else { ?>
+                <?php } else { ?>
 
                 <div class="img-usuario">
                     <img src="<?php echo INCLUDE_PATH_PAINEL; ?>uploads/<?php echo $_SESSION['img'] ?>" alt="">
                 </div>
 
-            <?php } ?>
-            <div class="nome-usuario">
-                <p><?php echo $_SESSION['nome'] ?></p>
-                <p><?php echo pegaCargo($_SESSION['cargo']) ?></p>
+                <?php } ?>
+                <div class="nome-usuario">
+                    <p><?php echo $_SESSION['nome'] ?></p>
+                    <p><?php echo pegaCargo($_SESSION['cargo']) ?></p>
+                </div>
             </div>
-        </div>
-        <div class="itens-menu">
-            <h2>Cadastro</h2>
-            <a href="">Cadastrar depoimentos</a>
-            <a href="">Cadastrar serviços</a>
-            <a href="">Cadastrar Slides</a>
-            <h2>Gestão</h2>
-            <a href="">Listar Depoimentos</a>
-            <a href="">Listar Serviços</a>
-            <a href="">Listar Slides</a>
-            <h2>Administração do Painel</h2>
-            <a href="">Editar usuario</a>
-            <a href="">Adicionar usuário</a>
-            <h2>Configuração Geral</h2>
-            <a href="">Editar</a>
-        </div>
+            <div class="itens-menu">
+                <h2>Cadastro</h2>
+                <a href="">Cadastrar depoimentos</a>
+                <a href="">Cadastrar serviços</a>
+                <a href="">Cadastrar Slides</a>
+                <h2>Gestão</h2>
+                <a href="">Listar Depoimentos</a>
+                <a href="">Listar Serviços</a>
+                <a href="">Listar Slides</a>
+                <h2>Administração do Painel</h2>
+                <a href="">Editar usuario</a>
+                <a href="">Adicionar usuário</a>
+                <h2>Configuração Geral</h2>
+                <a href="">Editar</a>
+            </div>
         </div>
     </div>
 
@@ -66,52 +66,20 @@ $nomeEmpresa = 'Guilherme';
                 <i class="fa fa-bars"></i>
             </div>
             <div class="loggout">
-                <a href="<?php INCLUDE_PATH_PAINEL; ?>?loggout"><span>Sair</span> <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <a href="<?php INCLUDE_PATH_PAINEL; ?>"><span>Home</span> <i
+                        class="fa fa-home"></i></a>
+                <a href="<?php INCLUDE_PATH_PAINEL; ?>?loggout"><span>Sair</span> <i
+                        class="fa-solid fa-arrow-right-from-bracket"></i></a>
             </div>
             <div class="clear"></div>
         </div>
     </header>
 
     <div class="content">
-        <div class="box-content w100 left">
-            <h2><i class="fa-solid fa-house"></i> Painel de controle - <?php echo $nomeEmpresa; ?></h2>
-
-            <div class="box-metricas">
-                <div class="box-metrica-single">
-                    <div class="box-metrica-wraper">
-                        <h2>Usuários Online</h2>
-                        <p>10</p>
-                    </div>
-                </div>
-                <div class="box-metrica-single">
-                <div class="box-metrica-wraper">
-                    <h2>Totais de visitas</h2>
-                    <p>100</p>
-                    </div>
-                </div>
-                <div class="box-metrica-single">
-                <div class="box-metrica-wraper">
-                    <h2>Visitas hoje</h2>
-                    <p>3</p>
-                </div>
-                </div>
-                <div class="clear"></div>
-
-            </div>
-
-        </div>
-        <div class="box-content w100 left">
-            
-        </div>
-        <div class="box-content w50 left">
-            
-        </div>
-        <div class="box-content w50 right">
-            
-        </div>
-        <div class="clear"></div>
+        <?php Painel::carregarPagina(); ?>
+        
     </div>
-    
+
 
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH_PAINEL; ?>js/main.js"></script>
