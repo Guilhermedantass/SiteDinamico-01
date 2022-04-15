@@ -6,7 +6,7 @@
         $nome = $_POST['nome'];
         $sobrenome = $_POST['sobrenome'];
         $email = $_POST['email'];
-        $telefone = $_POST['telefone'];
+        $telefone = $_POST['assunto'];
         $mensagem = $_POST['mensagem'];
 
         $sql = MySql::conectar()->prepare("INSERT INTO `tb_mensagem` VALUES(NULL, ?,?,?,?,?)");

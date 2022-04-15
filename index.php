@@ -42,7 +42,7 @@ site::contador();
 
     <header>
         <div class="center">
-            
+
             <div class="logo left"><a href="<?php echo $base_url ?>">Logomarca</a></div>
 
             <nav class="desktop right">
@@ -93,19 +93,15 @@ site::contador();
     <script src="<?php echo $base_url; ?>js/jquery.js"></script>
     <script src="<?php echo $base_url; ?>js/scripts.js"></script>
     <script src="<?php echo $base_url; ?>js/constantes.js"></script>
-    <?php
-    if ($url == 'home' || $url == '') { ?>
 
-        <script src="<?php echo $base_url; ?>js/slider.js"></script>
-
-    <?php } ?>
+    <script src="<?php echo $base_url; ?>js/slider.js"></script>
     <?php
     if ($url == 'Contato' || $url == 'home' || $url == '') { ?>
 
-        <script src="<?php echo $base_url; ?>js/textWrite.js"></script>
+    <script src="<?php echo $base_url; ?>js/textWrite.js"></script>
 
     <?php } ?>
 </body>
-    <script src="<?php echo $base_url; ?>js/exemplo.js"></script>
+<script src="<?php echo $base_url; ?>js/exemplo.js"></script>
 
 </html>

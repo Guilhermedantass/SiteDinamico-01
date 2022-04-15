@@ -30,8 +30,8 @@
                         <input type="email" name="email" placeholder="Email *" required>
                     </div>
                     <div class="campo">
-                        <label for="telefone"></label>
-                        <input type="tel" name="telefone" placeholder="Telefone">
+                        <label for="Assunto"></label>
+                        <input type="text" name="assunto" placeholder="Assunto">
                     </div>
                 </div>
                 <div class="mensagem">
