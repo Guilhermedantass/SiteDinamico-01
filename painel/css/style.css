@@ -362,6 +362,17 @@ header {
     content: '>> ';
 }
 
+.form-group-login label {
+    font-size: 13px;
+    font-weight: 300;
+    color: #000;
+}
+
+form .form-group-login:nth-of-type(2) {
+    position: relative;
+    top: 10px;
+}
+
 @media screen and (max-width: 1200px) {
     .box-metrica-single {
         min-height: 100px;

@@ -16,6 +16,7 @@
         public static function loggout(){
             session_destroy();
             header('location: '.INCLUDE_PATH_PAINEL);
+            setcookie('lembrar',true,time()-1,'/');
             die();
         }
 
