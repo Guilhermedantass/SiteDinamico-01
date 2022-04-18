@@ -70,7 +70,9 @@ if (isset($_GET['loggout'])) {
                 <i class="fa fa-bars"></i>
             </div>
             <div class="loggout">
-                <a href="<?php INCLUDE_PATH_PAINEL; ?>home"><span>Home</span> <i class="fa fa-home"></i></a>
+                <a <?php if(@$_GET['url'] == '' || @$_GET['url'] == 'home'){ ?>
+                    style="background-color:#686899; padding: 22px;" <?php } ?>
+                    href="<?php INCLUDE_PATH_PAINEL; ?>home"><span>Home</span> <i class="fa fa-home"></i></a>
                 <a href="<?php INCLUDE_PATH_PAINEL; ?>?loggout"><span>Sair</span> <i
                         class="fa-solid fa-arrow-right-from-bracket"></i></a>
             </div>

@@ -388,8 +388,31 @@ header {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .box-metrica-single {
+        width: 100%;
+        padding-top: 40%;
+    }
+    .w50 {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .menu-wraper {
         width: 200px;
+    }
+    .box-metrica-wraper h2 {
+        font-size: 24px;
+    }
+    .box-metrica-wraper p {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .itens-menu a {
+        font-size: 15px;
     }
 }
