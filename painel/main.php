@@ -1,7 +1,6 @@
 <?php
 if (isset($_GET['loggout'])) {
     Painel::loggout();
-
 }
 
 
@@ -44,11 +43,15 @@ if (isset($_GET['loggout'])) {
             </div>
             <div class="itens-menu">
                 <h2>Cadastro</h2>
-                <a <?php selecionadoMenu('cadastrar-depoimento'); ?>href="">Cadastrar depoimentos</a>
+                <a
+                    <?php selecionadoMenu('cadastrar-depoimento'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>cadastrar-depoimento">Cadastrar
+                    depoimentos</a>
                 <a <?php selecionadoMenu('cadastrar-servico'); ?>href="">Cadastrar serviços</a>
                 <a href="">Cadastrar Slides</a>
                 <h2>Gestão</h2>
-                <a <?php selecionadoMenu('listar-depoimentos'); ?>href="">Listar Depoimentos</a>
+                <a
+                    <?php selecionadoMenu('listar-depoimentos'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-depoimentos">Listar
+                    Depoimentos</a>
                 <a <?php selecionadoMenu('listar-servico'); ?>href="">Listar Serviços</a>
                 <a <?php selecionadoMenu('listar-slide'); ?>href="">Listar Slides</a>
                 <h2>Administração do Painel</h2>
@@ -70,7 +73,7 @@ if (isset($_GET['loggout'])) {
                 <i class="fa fa-bars"></i>
             </div>
             <div class="loggout">
-                <a <?php if(@$_GET['url'] == '' || @$_GET['url'] == 'home'){ ?>
+                <a <?php if (@$_GET['url'] == '' || @$_GET['url'] == 'home') { ?>
                     style="background-color:#686899; padding: 22px;" <?php } ?>
                     href="<?php INCLUDE_PATH_PAINEL; ?>home"><span>Home</span> <i class="fa fa-home"></i></a>
                 <a href="<?php INCLUDE_PATH_PAINEL; ?>?loggout"><span>Sair</span> <i

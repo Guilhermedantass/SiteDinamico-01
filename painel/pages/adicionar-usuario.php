@@ -42,31 +42,6 @@
                 }
             }
 
-            // if($imagem['name'] != ''){
-            //     $usuario = new Usuario();
-            //     if(Painel::imagemValida($imagem)){
-            //         Painel::deleteFile($imagem_atual);
-            //         $imagem = Painel::uploadFile($imagem);
-            //         if($usuario->atualizarUsuario($nome,$senha,$imagem)){
-            //             $_SESSION['img'] = $imagem;
-            //             $_SESSION['nome'] = $nome;
-            //             Painel::alert('sucesso','Atualizado com sucesso junto com a imagem');
-            //         }else{
-            //             Painel::alert('erro', 'Ocorreu um erro ao atualizar junto com a imagem');
-            //         }
-            //     }else{
-            //         Painel::alert('erro', 'O formato nao é valido');
-            //     }
-                
-            // }else{
-            //     $imagem = $imagem_atual;
-            //     if($usuario->atualizarUsuario($nome,$senha,$imagem)){
-            //         $_SESSION['nome'] = $nome;
-                    
-            //     }else{
-            //         Painel::alert('erro', 'Ocorreu um erro ao atualizar');
-            //     }
-            // }
             
         }
         ?>

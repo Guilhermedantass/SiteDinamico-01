@@ -368,6 +368,24 @@ section.contato form {
     padding-top: 40px;
 }
 
+.box-alert {
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.box-alert p {
+    color: white
+}
+
+.sucesso {
+    background-color: #00e699 !important;
+}
+
+.erro {
+    background-color: #f75353;
+}
+
 .campo {
     display: inline-block;
     padding-left: 20px;

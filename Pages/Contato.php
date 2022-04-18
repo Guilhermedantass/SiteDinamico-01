@@ -1,5 +1,5 @@
-<section class="banner-contato" style="position: relative;">
-    <div class="banner-contato-conteiner">
+<section class="banner-contato">
+    <div class=" banner-contato-conteiner">
         <!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 
         <h1 id="title-contato">Entre em contato conosco!</h1>
@@ -14,6 +14,17 @@
                 <br>
             </div>
             <form action="" method="POST">
+                <?php
+
+                if (isset($_POST['acao'])) {
+                    if (Painel::insert($_POST)) {
+                        Painel::alert('sucesso', 'O cadastro do depoimento feito com sucesso!');
+                    } else {
+                        Painel::alert('erro', 'Não é permitido campos vazios!');
+                    }
+                }
+
+                ?>
                 <div class="nome-sobrenome">
                     <div class="campo">
                         <label for="nome"></label>
@@ -31,13 +42,14 @@
                     </div>
                     <div class="campo">
                         <label for="Assunto"></label>
-                        <input type="text" name="assunto" placeholder="Assunto">
+                        <input type="text" name="assunto" placeholder="Assunto *">
                     </div>
                 </div>
                 <div class="mensagem">
                     <textarea type="text" id="mensagem" name="mensagem" placeholder="Mensagem *" required></textarea>
                 </div>
                 <div class="botao">
+                    <input type="hidden" name="nome_tabela" value="tb_mensagem">
                     <input type="submit" value="Enviar!" name="acao">
                 </div>
                 <div class="clear"></div>
