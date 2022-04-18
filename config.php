@@ -9,29 +9,53 @@
 
     spl_autoload_register($autoload);
     
-    // $base_url = "http://" . $_SERVER['HTTP_HOST'];
+    $base_url = "http://" . $_SERVER['HTTP_HOST'];
     // $base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
     // $config['base_url'] = $base_url;
 
-    define('INCLUDE_PATH', 'http://localhost/FullStack/');
+    define('INCLUDE_PATH', $base_url.'/FullStack/');
     define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
+    
+    define('BASE_DIR_PAINEL', __DIR__.'/painel');
     //Banco de dados
     define('HOST','localhost');
     define('DB','sitedinamico');
     define('USER','root');
     define('PASS','root');
 
+    
+
+
 
     /*   */
 
-    function pegaCargo($cargo){
-        $arr = [
-            '0' => 'Normal',    
-            '1' => 'Sub Administrador',
-            '2' => 'Administrador',
-        ];
+    function pegaCargo($indice){
 
-        return $arr[$cargo];
+        return Painel::$cargos[$indice];
+    }
+
+    function selecionadoMenu($par){
+        // <i class="fa-solid fa-arrow-left"></i>
+        $url = explode('/',@$_GET['url'])[0];
+        if($url == $par){
+            echo 'class="menu-active"';
+        }
+
+    }
+    function verificaPermissaoMenu($permissao){
+        if($_SESSION['cargo'] >= $permissao){
+            return;
+        }else{
+            echo 'style="display:none;"';
+        }
+    }
+    function verificaPermissaoPagina($permissao){
+        if($_SESSION['cargo'] >= $permissao){
+            return;
+        }else{
+            include('painel/pages/permissao-negada.php');
+            die();
+        }
     }
 
     define('NOME_EMPRESA','Guilherme')

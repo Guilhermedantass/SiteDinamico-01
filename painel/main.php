@@ -44,18 +44,22 @@ if (isset($_GET['loggout'])) {
             </div>
             <div class="itens-menu">
                 <h2>Cadastro</h2>
-                <a href="">Cadastrar depoimentos</a>
-                <a href="">Cadastrar serviços</a>
+                <a <?php selecionadoMenu('cadastrar-depoimento'); ?>href="">Cadastrar depoimentos</a>
+                <a <?php selecionadoMenu('cadastrar-servico'); ?>href="">Cadastrar serviços</a>
                 <a href="">Cadastrar Slides</a>
                 <h2>Gestão</h2>
-                <a href="">Listar Depoimentos</a>
-                <a href="">Listar Serviços</a>
-                <a href="">Listar Slides</a>
+                <a <?php selecionadoMenu('listar-depoimentos'); ?>href="">Listar Depoimentos</a>
+                <a <?php selecionadoMenu('listar-servico'); ?>href="">Listar Serviços</a>
+                <a <?php selecionadoMenu('listar-slide'); ?>href="">Listar Slides</a>
                 <h2>Administração do Painel</h2>
-                <a href="">Editar usuario</a>
-                <a href="">Adicionar usuário</a>
+                <a <?php selecionadoMenu('editar-usuario'); ?>
+                    href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuario">Editar
+                    usuario</a>
+                <a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2) ?>
+                    href="<?php echo INCLUDE_PATH_PAINEL; ?>adicionar-usuario">Adicionar
+                    usuário</a>
                 <h2>Configuração Geral</h2>
-                <a href="">Editar</a>
+                <a <?php selecionadoMenu('editar-site'); ?>href="">Editar site</a>
             </div>
         </div>
     </div>
@@ -66,8 +70,7 @@ if (isset($_GET['loggout'])) {
                 <i class="fa fa-bars"></i>
             </div>
             <div class="loggout">
-            <a href="<?php INCLUDE_PATH_PAINEL; ?>"><span>Home</span> <i
-                        class="fa fa-home"></i></a>
+                <a href="<?php INCLUDE_PATH_PAINEL; ?>home"><span>Home</span> <i class="fa fa-home"></i></a>
                 <a href="<?php INCLUDE_PATH_PAINEL; ?>?loggout"><span>Sair</span> <i
                         class="fa-solid fa-arrow-right-from-bracket"></i></a>
             </div>
@@ -77,7 +80,7 @@ if (isset($_GET['loggout'])) {
 
     <div class="content">
         <?php Painel::carregarPagina(); ?>
-        
+
     </div>
 
 

@@ -1,10 +1,10 @@
 <section class="banner-conteiner">
-    <div class="banner-single" style="background-image: url('<?php echo $base_url ?>images/bg-form.jpg');"></div>
-    <div class="banner-single" style="background-image: url('<?php echo $base_url ?>images/bg-form2.jpg');"></div>
-    <div class="banner-single" style="background-image: url('<?php echo $base_url ?>images/bg-form4.jpg');"></div>
+    <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH ?>images/bg-form.jpg');"></div>
+    <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH ?>images/bg-form2.jpg');"></div>
+    <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH ?>images/bg-form4.jpg');"></div>
     <div class="overlay"></div>
     <div class="center">
-       
+
         <form action="" method="post">
             <h2 id='title-banner-conteiner'>Qual o seu melhor e-mail?</h2>
             <input type="email" name="email" required>
@@ -31,7 +31,7 @@
                 eaque aliquam, ab, illum beatae nobis rem!</p>
         </div>
         <div class="w50 left">
-            <img class="right" src="<?php echo $base_url ?>images/foto.jpg" alt="">
+            <img class="right" src="<?php echo INCLUDE_PATH ?>images/foto.jpg" alt="">
         </div>
         <div class="clear"></div>
     </div>

@@ -25,7 +25,7 @@
                 <p><?php echo count($usariosOnline)?></p>
             </div>
 
-        </div>
+        </div>  
 
         <div class="box-metrica-single">
 
