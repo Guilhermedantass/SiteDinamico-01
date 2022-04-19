@@ -33,7 +33,8 @@ $depoimentos = Painel::selectAll('tb_site.dopoimentos', ($paginaAtual - 1) * $po
             <tr>
                 <td><?php echo $value['nome']; ?></td>
                 <td><?php echo $value['depoimento']; ?></td>
-                <td><a href="" class="btn"><i class="fa fa-pencil"></i> Editar</a></td>
+                <td><a href="<?php echo INCLUDE_PATH_PAINEL ?>editar-depoimento?id=<?php echo $value['id']  ?>"
+                        class="btn"><i class="fa fa-pencil"></i> Editar</a></td>
                 <td><a actionBtn="delete"
                         href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimentos?excluir=<?php echo $value['id']  ?>"
                         class="btn"><i class="fa-solid fa-trash"></i> Excluir</a>
