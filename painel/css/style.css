@@ -394,6 +394,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
+    font-weight: 300;
+    min-width: 900px;
 }
 
 table a.btn {
@@ -413,6 +415,26 @@ table tr {
 
 table td {
     padding: 8px;
+}
+
+.paginacao {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.paginacao a {
+    border: 1px solid #ccc;
+    padding: 5px;
+    color: black;
+    margin-left: 10px;
+}
+
+.paginacao a.pag-selected {
+    background-color: #ccc;
+}
+
+.wraper-table {
+    overflow-x: auto;
 }
 
 @media screen and (max-width: 1200px) {

@@ -122,10 +122,16 @@ class Painel
         return $certo;
     }
 
-    public static function selectAll($tabela)
+    public static function selectAll($tabela, $start = null, $end = null)
     {
-        $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela`");
+        if ($start == null && $end == null) {
+            $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela`");
+        } else {
+            $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela` LIMIT $start, $end");
+        }
         $sql->execute();
+
+
         return $sql->fetchAll();
     }
 }
