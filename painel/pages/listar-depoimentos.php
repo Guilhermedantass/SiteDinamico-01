@@ -5,9 +5,12 @@ if (isset($_GET['excluir'])) {
     Painel::deletar('tb_site.dopoimentos', $idExluir);
     Painel::redirect(INCLUDE_PATH_PAINEL . 'listar-depoimentos');
 }
+if (isset($_GET['order'])) {
+    Painel::orderItem('tb_site.dopoimentos', $_GET['order'], $_GET['id']);
+}
 
 $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-$porPagina = 3;
+$porPagina = 10;
 
 $depoimentos = Painel::selectAll('tb_site.dopoimentos', ($paginaAtual - 1) * $porPagina, $porPagina);
 
@@ -24,6 +27,8 @@ $depoimentos = Painel::selectAll('tb_site.dopoimentos', ($paginaAtual - 1) * $po
                 <td>Depoimento</td>
                 <td>Editar</td>
                 <td>Deletar</td>
+                <td>#</td>
+                <td>#</td>
             </tr>
 
             <?php
@@ -39,6 +44,12 @@ $depoimentos = Painel::selectAll('tb_site.dopoimentos', ($paginaAtual - 1) * $po
                         href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimentos?excluir=<?php echo $value['id']  ?>"
                         class="btn"><i class="fa-solid fa-trash"></i> Excluir</a>
                 </td>
+                <td><a class="btn order"
+                        href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimentos?order=up&id=<?php echo $value['id']; ?>"><i
+                            class="fa-solid fa-chevron-up"></i></a></td>
+                <td><a class="btn order"
+                        href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimentos?order=down&id=<?php echo $value['id']; ?>"><i
+                            class="fa-solid fa-chevron-down"></i></a></td>
             </tr>
             <?php } ?>
         </table>

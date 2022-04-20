@@ -74,27 +74,24 @@
     <div class="center">
         <div id="depoimentos" class="w50 left depoimento-conteiner">
             <h2 class="title">Depoimentos</h2>
+
+            <?php
+
+            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.dopoimentos` ORDER BY order_id ASC LIMIT 3 ");
+            $sql->execute();
+            $depoimento = $sql->fetchAll();
+            foreach ($depoimento as $key => $value) {
+
+            ?>
             <div class="depoimento-single">
-                <p class="depoimento-descricao">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos non
-                    recusandae accusantium,
-                    impedit libero aperiam vero expedita tempora omnis error asperiores explicabo necessitatibus
-                    eaque aliquam, ab, illum beatae nobis rem!"</p>
-                <p class="nome-autor">-Lorem ipsum</p>
+                <p class="depoimento-descricao">"<?php echo $value['depoimento']; ?>"</p>
+                <p class="nome-autor">-<?php echo $value['nome']; ?></p>
             </div>
-            <div class="depoimento-single">
-                <p class="depoimento-descricao">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos non
-                    recusandae accusantium,
-                    impedit libero aperiam vero expedita tempora omnis error asperiores explicabo necessitatibus
-                    eaque aliquam, ab, illum beatae nobis rem!"</p>
-                <p class="nome-autor">-Lorem ipsum</p>
-            </div>
-            <div class="depoimento-single">
-                <p class="depoimento-descricao">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos non
-                    recusandae accusantium,
-                    impedit libero aperiam vero expedita tempora omnis error asperiores explicabo necessitatibus
-                    eaque aliquam, ab, illum beatae nobis rem!"</p>
-                <p class="nome-autor">-Lorem ipsum</p>
-            </div>
+
+            <?php
+            }
+            ?>
+
         </div>
         <!--depoimentos-->
         <div id="servicos" class="w50 left servicos-conteiner">

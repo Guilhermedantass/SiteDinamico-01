@@ -171,6 +171,11 @@ header {
     font-weight: 300;
 }
 
+a.btn.order {
+    background-color: #0091ea;
+    color: white;
+}
+
 
 /*-> content <-*/
 
