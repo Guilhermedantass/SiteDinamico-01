@@ -98,15 +98,15 @@
             <h2 class="title">Serviços</h2>
             <div class="servicos">
                 <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos non recusandae accusantium,
-                        impedit libero aperiam vero expedita tempora omnis error asperiores explicabo necessitatibus
-                        eaque aliquam, ab, illum beatae nobis rem!</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos non recusandae accusantium,
-                        impedit libero aperiam vero expedita tempora omnis error asperiores explicabo necessitatibus
-                        eaque aliquam, ab, illum beatae nobis rem!</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos non recusandae accusantium,
-                        impedit libero aperiam vero expedita tempora omnis error asperiores explicabo necessitatibus
-                        eaque aliquam, ab, illum beatae nobis rem!</li>
+                    <?php
+                    $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.servicos` ORDER BY order_id ASC LIMIT 5 ");
+                    $sql->execute();
+                    $servico = $sql->fetchAll();
+                    foreach ($servico as $key => $value) {
+
+                    ?>
+                    <li><?php echo $value['servicos']; ?></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>

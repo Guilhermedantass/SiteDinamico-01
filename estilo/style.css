@@ -296,6 +296,11 @@ section.extras li {
     text-align: justify;
 }
 
+.servicos ul li {
+    list-style: disc;
+    font-weight: bold;
+}
+
 
 /* -> Contato<-*/
 
