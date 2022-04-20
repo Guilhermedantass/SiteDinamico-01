@@ -81,7 +81,7 @@ class Painel
 
     public static function uploadFile($file)
     {
-        $formatoArquivo = explode('.', $file['nome']);
+        $formatoArquivo = explode('.', $file['name']);
         $imagemNome = uniqid() . '.' . $formatoArquivo[count($formatoArquivo) - 1];
         if (move_uploaded_file($file['tmp_name'], BASE_DIR_PAINEL . '/uploads/' . $imagemNome)) {
             return $imagemNome;

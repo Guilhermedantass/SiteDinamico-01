@@ -49,14 +49,17 @@ if (isset($_GET['loggout'])) {
                 <a
                     <?php selecionadoMenu('cadastrar-servico'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>cadastrar-servico">Cadastrar
                     serviço</a>
-                <a href="">Cadastrar Slides</a>
+                <a
+                    <?php selecionadoMenu('cadastrar-slides'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>cadastrar-slides">Cadastrar
+                    Slides</a>
                 <h2>Gestão</h2>
                 <a
                     <?php selecionadoMenu('listar-depoimentos'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-depoimentos">Listar
                     Depoimentos</a>
                 <a <?php selecionadoMenu('listar-servicos'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-servicos">Listar
                     Serviços</a>
-                <a <?php selecionadoMenu('listar-slide'); ?>href="">Listar Slides</a>
+                <a <?php selecionadoMenu('listar-slides'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-slides">Listar
+                    Slides</a>
                 <h2>Administração do Painel</h2>
                 <a <?php selecionadoMenu('editar-usuario'); ?>
                     href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuario">Editar

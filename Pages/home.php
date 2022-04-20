@@ -77,7 +77,7 @@
 
             <?php
 
-            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.dopoimentos` ORDER BY order_id ASC LIMIT 3 ");
+            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.dopoimentos` ORDER BY order_id ASC LIMIT 4 ");
             $sql->execute();
             $depoimento = $sql->fetchAll();
             foreach ($depoimento as $key => $value) {
