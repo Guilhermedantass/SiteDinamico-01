@@ -160,6 +160,18 @@ class Painel
         return $sql->fetch();
     }
 
+    public static function selectQuery($tabela, $query, $start = null, $end = null)
+    {
+        if ($start == null && $end == null) {
+            $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela` WHERE $query");
+        } else {
+            $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela` WHERE $query ORDER BY order_id ASC LIMIT $start, $end");
+        }
+
+        $sql->execute();
+        return $sql->fetchAll();
+    }
+
     public static function update($arr)
     {
         $certo = true;

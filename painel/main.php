@@ -67,8 +67,10 @@ if (isset($_GET['loggout'])) {
                 <a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2) ?>
                     href="<?php echo INCLUDE_PATH_PAINEL; ?>adicionar-usuario">Adicionar
                     usuário</a>
-                <h2>Configuração Geral</h2>
-                <a <?php selecionadoMenu('editar-site'); ?>href="">Editar site</a>
+                <h2>Notificações</h2>
+                <a
+                    <?php selecionadoMenu('listar-mensagens'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-mensagens">Listar
+                    mensagem</a>
             </div>
         </div>
     </div>

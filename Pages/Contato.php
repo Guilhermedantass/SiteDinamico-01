@@ -19,8 +19,10 @@
                 if (isset($_POST['acao'])) {
                     if (Painel::insert($_POST)) {
                         Painel::alert('sucesso', 'O cadastro do depoimento feito com sucesso!');
+                        echo '<br><br>';
                     } else {
                         Painel::alert('erro', 'Não é permitido campos vazios!');
+                        echo '<br><br>';
                     }
                 }
 
@@ -49,6 +51,8 @@
                     <textarea type="text" id="mensagem" name="mensagem" placeholder="Mensagem *" required></textarea>
                 </div>
                 <div class="botao">
+                    <input type="hidden" name="lida" value="0">
+                    <input type="hidden" name="order_id" value="0">
                     <input type="hidden" name="nome_tabela" value="tb_mensagem">
                     <input type="submit" value="Enviar!" name="acao">
                 </div>
