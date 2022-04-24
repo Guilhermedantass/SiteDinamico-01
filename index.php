@@ -26,7 +26,7 @@ site::contador();
 
 
     <base base='<?php echo INCLUDE_PATH  ?>' />
-    <?php 
+    <?php
     $url = isset($_GET['url']) ? $_GET['url'] : 'home';
     switch ($url) {
         case 'Sobre':
@@ -50,6 +50,7 @@ site::contador();
                     <li><a href="<?php echo INCLUDE_PATH ?>home">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>Sobre">Sobre</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>Servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH ?>noticias">Notícias</a></li>
                     <li><a realtime='contato' href="<?php echo INCLUDE_PATH ?>Contato">Contato</a></li>
                 </ul>
             </nav>
@@ -59,6 +60,7 @@ site::contador();
                     <li><a href="<?php echo INCLUDE_PATH ?>home">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>Sobre">Sobre</a></li>
                     <li><a href="<?php echo INCLUDE_PATH ?>Servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH ?>noticias">Notícias</a></li>
                     <li><a realtime='contato' href="<?php echo INCLUDE_PATH ?>Contato">Contato</a></li>
                 </ul>
             </nav>
@@ -96,7 +98,7 @@ site::contador();
 
     <script src="<?php echo INCLUDE_PATH  ?>js/slider.js"></script>
     <?php
-    if ($url == 'Contato' || $url == 'home' || $url == '') { ?>
+    if ($url == 'Contato' || $url == 'home' || $url == '' || $url == 'noticias') { ?>
 
     <script src="<?php echo INCLUDE_PATH  ?>js/textWrite.js"></script>
 

@@ -33,6 +33,10 @@ img {
     max-width: 400px;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .w50 {
     padding: 0 2%;
     width: 50%;
@@ -475,20 +479,116 @@ section.error-404 .esquerda {
     top: 50%;
 }
 
-@media screen and (max-width: 768px) {
-    .w50 {
-        float: none;
-        width: 100%;
-        padding: 20px;
-    }
-    img {
-        display: block;
-        margin: 0 auto;
-        float: none !important;
-    }
+
+/* portal de noticias */
+
+section.header-noticias {
+    background-image: url(../images/bg-form.jpg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    position: relative;
 }
 
-@media screen and (max-width:700px) {
+section.header-noticias h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title-noticias-conteiner {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#title-noticias-conteiner::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+section.conteiner-portal {
+    padding: 50px 0;
+}
+
+.box-content-sidebar {
+    background-color: #DDDDDD;
+    padding: 15px;
+    color: #333864;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.box-content-sidebar h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.sidebar {
+    float: left;
+    width: 30%;
+}
+
+.box-content-sidebar i {
+    padding-left: 5px;
+}
+
+.box-content-sidebar input[type=text] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(220, 220, 220);
+    padding-left: 8px;
+    margin: 10px 0;
+}
+
+.box-content-sidebar select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(220, 220, 220);
+    padding-left: 8px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.box-content-sidebar input[type=submit] {
+    cursor: pointer;
+    background-color: #F40B5C;
+    color: white;
+    width: 115px;
+    height: 35px;
+    border: 0;
+    margin: 10px 0;
+}
+
+.autor-box-portal {
+    text-align: center;
+}
+
+.box-img-autor {
+    margin: 20px 0;
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url(../images/foto.jpg);
+}
+
+.autor-box-portal h3,
+.autor-box-portal p {
+    color: #222222;
+}
+
+.autor-box-portal p {
+    font-size: 15px;
+    margin-top: 8px;
+    font-weight: 300;
+}
+
+@media screen and (max-width:850px) {
     nav.desktop {
         display: none;
     }
@@ -523,6 +623,22 @@ section.error-404 .esquerda {
         font-size: 16px;
         color: #444;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .w50 {
+        float: none;
+        width: 100%;
+        padding: 20px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        float: none !important;
+    }
+}
+
+@media screen and (max-width:700px) {
     .w33 {
         width: 100%;
     }
