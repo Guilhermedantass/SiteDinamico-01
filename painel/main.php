@@ -71,6 +71,18 @@ if (isset($_GET['loggout'])) {
                 <a
                     <?php selecionadoMenu('listar-mensagens'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-mensagens">Listar
                     mensagem</a>
+                <h2>Gestão de notícias</h2>
+                <a
+                    <?php selecionadoMenu('cadastrar-categoria'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>cadastrar-categoria">Cadastrar
+                    Categoria</a>
+                <a
+                    <?php selecionadoMenu('listar-categorias'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-categorias">listar
+                    Categorias</a>
+                <a
+                    <?php selecionadoMenu('cadastrar-noticia'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>cadastrar-noticia">Cadastrar
+                    notícia</a>
+                <a <?php selecionadoMenu('listar-noticias'); ?>href="<?php echo INCLUDE_PATH_PAINEL; ?>listar-noticias">listar
+                    notícias</a>
             </div>
         </div>
     </div>
