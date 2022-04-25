@@ -583,9 +583,79 @@ section.conteiner-portal {
 }
 
 .autor-box-portal p {
-    font-size: 15px;
+    font-size: 15 px;
     margin-top: 8px;
     font-weight: 300;
+}
+
+.conteudo-portal {
+    float: left;
+    width: 70%;
+    padding-left: 3%;
+}
+
+.header-conteudo-portal {
+    color: #333864;
+}
+
+.header-conteudo-portal h2 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.header-conteudo-portal h2>span {
+    border-top: 4px solid #333864;
+}
+
+.box-single-conteudo {
+    margin: 15px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.box-single-conteudo h2 {
+    color: #222222;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.box-single-conteudo p {
+    color: #222222;
+    font-weight: normal;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.box-single-conteudo a {
+    background-color: #00B95C;
+    color: white;
+    padding: 5px;
+    font-weight: normal;
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0 3px;
+    margin-top: 8px;
+}
+
+.paginator {
+    text-align: center;
+}
+
+.paginator a {
+    margin: 0 8px;
+    display: inline-block;
+    padding: 6px 4px;
+    border: 1px solid rgb(220, 220, 220);
+    color: #000000;
+}
+
+.paginator a.active-page {
+    background-color: rgb(220, 220, 220);
 }
 
 @media screen and (max-width:850px) {
@@ -626,6 +696,15 @@ section.conteiner-portal {
 }
 
 @media screen and (max-width: 768px) {
+    #title-noticias-conteiner {
+        width: 75%;
+    }
+    .conteudo-portal {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+    }
     .w50 {
         float: none;
         width: 100%;

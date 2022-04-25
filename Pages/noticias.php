@@ -48,6 +48,40 @@
                 </div>
             </div>
         </div>
+        <div class="conteudo-portal">
+            <div class="header-conteudo-portal">
+                <!-- <h2>Visualizando todos os posts</h2> -->
+                <h2>Visualizando posts em <span>Esportes </span></h2>
+            </div>
+            <?php
+            for ($i = 0; $i < 5; $i++) {
+
+            ?>
+            <div class="box-single-conteudo">
+                <h2>19/09/2019 - Conheça os eleitos para ga...</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In est libero, convallis et ex eget,
+                    vulputate
+                    tincidunt ante. Pellentesque consequat leo sit amet lectus bibendum varius. Aenean quis imperdiet
+                    tellus. Pellentesque vitae justo sit amet dui pulvinar laoreet eu in tortor. Sed ornare magna porta
+                    dui
+                    cursus placerat. Morbi a ante ut leo malesuada vehicula. Fusce faucibus eu nibh vel fringilla.
+                    Suspendisse et tortor vel felis cursus sagittis et in eros. In consequat quam eu fringilla molestie.
+                    <a href="<?php echo INCLUDE_PATH; ?>esportes/nome-do-post">Leia mais</a>
+            </div>
+
+            <?php } ?>
+
+            <div class="paginator">
+                <a class="active-page" href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+            </div>
+
+        </div>
         <div class="clear"></div>
     </div>
+
+
+
 </section>
