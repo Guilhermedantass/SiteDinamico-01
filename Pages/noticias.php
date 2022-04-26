@@ -1,3 +1,9 @@
+<?php
+$url = explode('/', $_GET['url']);
+if (!isset($url[2])) {
+
+?>
+
 <section class="header-noticias">
     <div class="center">
         <h2 id='title-noticias-conteiner'><i class="fa-regular fa-newspaper"></i> Acompanhe as ultimas notícias do
@@ -23,12 +29,12 @@
                 <form action="">
                     <select name="categoria" id="">
                         <?php
-                        $categorias = Painel::selectAll('tb_site.categorias');
+                            $categorias = Painel::selectAll('tb_site.categorias');
 
-                        foreach ($categorias as $key => $value) {
-                            # code...
+                            foreach ($categorias as $key => $value) {
+                                # code...
 
-                        ?>
+                            ?>
                         <option name="<?php echo $value['id'] ?>" id=""><?php echo $value['nome'] ?></option>
                         <?php } ?>
                     </select>
@@ -54,9 +60,9 @@
                 <h2>Visualizando posts em <span>Esportes </span></h2>
             </div>
             <?php
-            for ($i = 0; $i < 5; $i++) {
+                for ($i = 0; $i < 5; $i++) {
 
-            ?>
+                ?>
             <div class="box-single-conteudo">
                 <h2>19/09/2019 - Conheça os eleitos para ga...</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In est libero, convallis et ex eget,
@@ -66,7 +72,7 @@
                     dui
                     cursus placerat. Morbi a ante ut leo malesuada vehicula. Fusce faucibus eu nibh vel fringilla.
                     Suspendisse et tortor vel felis cursus sagittis et in eros. In consequat quam eu fringilla molestie.
-                    <a href="<?php echo INCLUDE_PATH; ?>esportes/nome-do-post">Leia mais</a>
+                    <a href="<?php echo INCLUDE_PATH; ?>noticias/esportes/nome-do-post">Leia mais</a>
             </div>
 
             <?php } ?>
@@ -81,7 +87,8 @@
         </div>
         <div class="clear"></div>
     </div>
-
-
-
 </section>
+
+<?php } else {
+    include("noticia_single.php");
+} ?>

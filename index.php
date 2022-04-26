@@ -75,9 +75,15 @@ site::contador();
             include('Pages/' . $url . '.php');
         } else {
             if ($url != 'Sobre' and $url != 'Servicos') {
-                $erro404 = true;
-                include('Pages/404.php');
+                $urlPar = explode('/', $url)[0];
+                if ($urlPar != 'noticias') {
+                    $erro404 = true;
+                    include('Pages/404.php');
+                } else {
+                    include('Pages/noticias.php');
+                }
             } else {
+
                 include('Pages/home.php');
             }
         }
