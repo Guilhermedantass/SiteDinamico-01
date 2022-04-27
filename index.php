@@ -103,6 +103,26 @@ site::contador();
     <script src="<?php echo INCLUDE_PATH  ?>js/constantes.js"></script>
 
     <script src="<?php echo INCLUDE_PATH  ?>js/slider.js"></script>
+
+
+    <?php if (is_array($url) && strstr($url[0], 'noticias') !== false) {
+        # code...
+    ?>
+
+    <script>
+    $(function() {
+        $('select').change(function() {
+            location.href = INCLUDE_PATH + "noticias/" + $(this).val();
+        })
+    })
+    </script>
+
+    <?php
+    }
+    ?>
+
+
+
     <?php
     if ($url == 'Contato' || $url == 'home' || $url == '' || $url == 'noticias') { ?>
 

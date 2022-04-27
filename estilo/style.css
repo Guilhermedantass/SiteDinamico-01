@@ -619,6 +619,13 @@ section.conteiner-portal {
     font-size: 22px;
 }
 
+.box-single-conteudo h3 {
+    color: #222222;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
 .box-single-conteudo p {
     color: #222222;
     font-weight: normal;

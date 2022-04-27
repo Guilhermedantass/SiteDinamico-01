@@ -21,6 +21,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
 
 
             $titulo = $_POST['titulo'];
+            $subtitulo = $_POST['subtitulo'];
             $conteudo = $_POST['conteudo'];
             $capa = $_FILES['capa'];
             $capa_atual = $_POST['capa_atual'];
@@ -34,7 +35,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                         Painel::deleteFile($capa_atual);
                         $capa = Painel::uploadFile($capa);
                         $slug = Painel::generateSlug($titulo);
-                        $arr = ['titulo' => $titulo, 'conteudo' => $conteudo, 'capa' => $capa, 'slug' => $slug, 'id' => $id, 'categoria_id' => $_POST['categoria_id'], 'nome_tabela' => 'tb_site.noticias'];
+                        $arr = ['titulo' => $titulo, 'subtitulo' => $subtitulo, 'data' => date('Y-m-d'), 'conteudo' => $conteudo, 'capa' => $capa, 'slug' => $slug, 'id' => $id, 'categoria_id' => $_POST['categoria_id'], 'nome_tabela' => 'tb_site.noticias'];
                         Painel::update($arr);
                         $noticia = Painel::select('tb_site.noticias', 'id=?', array($id));
                         Painel::alert('sucesso', 'Atualizado com sucesso junto com a capa ');
@@ -44,7 +45,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                 } else {
                     $capa = $capa_atual;
                     $slug = Painel::generateSlug($titulo);
-                    $arr = ['titulo' => $titulo,  'conteudo' => $conteudo, 'capa' => $capa, 'slug' => $slug, 'categoria_id' => $_POST['categoria_id'], 'id' => $id, 'nome_tabela' => 'tb_site.noticias'];
+                    $arr = ['titulo' => $titulo, 'subtitulo' => $subtitulo, 'data' => date('Y-m-d'), 'conteudo' => $conteudo, 'capa' => $capa, 'slug' => $slug, 'categoria_id' => $_POST['categoria_id'], 'id' => $id, 'nome_tabela' => 'tb_site.noticias'];
                     Painel::update($arr);
                     $noticia = Painel::select('tb_site.noticias', 'id=?', array($id));
                     Painel::alert('sucesso', 'Atualizado com sucesso');
@@ -57,6 +58,10 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
         <div class="form-group">
             <label for="">titulo: </label>
             <input type="text" name="titulo" required value="<?php echo $noticia['titulo'] ?>">
+        </div>
+        <div class="form-group">
+            <label for="">subtitulo: </label>
+            <input type="text" name="subtitulo" required value="<?php echo $noticia['subtitulo'] ?>">
         </div>
         <div class="form-group">
             <label for="">conteudo: </label>

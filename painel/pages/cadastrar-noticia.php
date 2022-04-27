@@ -10,6 +10,7 @@
         if (isset($_POST['acao'])) {
             $categoria_id = $_POST['categoria_id'];
             $titulo = $_POST['titulo'];
+            $subtitulo = $_POST['subtitulo'];
             $conteudo = $_POST['conteudo'];
             $capa = $_FILES['capa'];
 
@@ -27,7 +28,7 @@
                         $imagem = Painel::uploadFile($capa);
                         $slug = Painel::generateSlug($titulo);
                         $arr = [
-                            'categoria_id' => $categoria_id, 'titulo' => $titulo, 'conteudo' => $conteudo, 'capa' => $imagem, 'slug' => $slug,
+                            'categoria_id' => $categoria_id, 'data' => date('Y-m-d'), 'titulo' => $titulo, 'subtitulo' => $subtitulo, 'conteudo' => $conteudo, 'capa' => $imagem, 'slug' => $slug,
                             'order_id' => 0,
                             'nome_tabela' => 'tb_site.noticias'
                         ];
@@ -73,6 +74,10 @@
         <div class="form-group">
             <label for="">Título: </label>
             <input type="text" name="titulo" value="<?php if ($erro) recoverPost('titulo'); ?>">
+        </div>
+        <div class="form-group">
+            <label for="">Subtitulo: </label>
+            <input type="text" name="subtitulo" value="<?php if ($erro) recoverPost('subtitulo'); ?>">
         </div>
 
         <div class="form-group">

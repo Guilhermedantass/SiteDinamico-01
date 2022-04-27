@@ -18,7 +18,7 @@
 
                 if (isset($_POST['acao'])) {
                     if (Painel::insert($_POST)) {
-                        Painel::alert('sucesso', 'O cadastro do depoimento feito com sucesso!');
+                        Painel::alert('sucesso', 'A mensagem foi enviada com sucesso!');
                         echo '<br><br>';
                     } else {
                         Painel::alert('erro', 'Não é permitido campos vazios!');

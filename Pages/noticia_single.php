@@ -1,56 +1,36 @@
+<?php
+$url = explode('/', $_GET['url']);
+$verifica_categoria = MySql::conectar()->prepare("SELECT * FROM `tb_site.categorias` WHERE slug = ?");
+$verifica_categoria->execute(array($url[1]));
+if ($verifica_categoria->rowCount() == 0) {
+    Painel::redirect(INCLUDE_PATH . 'noticias');
+}
+$categoriaInfo = $verifica_categoria->fetch();
+$post = MySql::conectar()->prepare("SELECT * FROM `tb_site.noticias` WHERE slug = ? AND categoria_id = ?");
+$post->execute(array($url[2], $categoriaInfo['id']));
+if ($post->rowCount() == 0) {
+    Painel::redirect(INCLUDE_PATH . 'noticias');
+}
+$post = $post->fetch();
+
+
+
+?>
+
+
 <section class="noticia-single">
     <div class="center">
         <header>
-            <h1>Título da minha notícia</h1>
-            <h2><i class="fa fa-calendar"></i> 19/09/2019</h2>
+            <h1><?php echo $post['titulo']; ?></h1>
+            <h2><i class="fa fa-calendar"></i> <?php echo $post['data']; ?></h2>
+            <br>
+            <h3><?php echo $post['subtitulo']; ?></h3>
+            <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $post['capa'] ?>" alt="">
         </header>
 
         <article>
+            <?php echo $post['conteudo']; ?>
 
-            <h2>Titulo em h2</h2>
-            <h3>titulo em h3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam eu ante consequat dictum. Mauris a
-                pharetra
-                justo. Suspendisse finibus, felis id mattis eleifend, augue nibh egestas libero, non finibus libero nunc
-                a
-                mi.
-                Quisque in urna dui. Sed sagittis velit tortor, ac sagittis massa venenatis vitae. Maecenas quis felis
-                fringilla,
-                aliquam sapien vel, aliquam libero. Ut suscipit scelerisque eros et ullamcorper. Nullam ornare tortor
-                justo.
-                Morbi
-                vitae imperdiet mauris. Fusce ultricies, dui id vestibulum bibendum, erat neque imperdiet purus, ac
-                gravida
-                dolor
-                quam hendrerit ex. Quisque sit amet tincidunt odio, eu vestibulum mi. Nulla facilisi. Ut non erat
-                elementum,
-                accumsan nisi ut, viverra dolor.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in diam eu ante consequat dictum. Mauris a
-                pharetra
-                justo. Suspendisse finibus, felis id mattis eleifend, augue nibh egestas libero, non finibus libero nunc
-                a
-                mi.
-                Quisque in urna dui. Sed sagittis velit tortor, ac sagittis massa venenatis vitae. Maecenas quis felis
-                fringilla,
-                aliquam sapien vel, aliquam libero. Ut suscipit scelerisque eros et ullamcorper. Nullam ornare tortor
-                justo.
-                Morbi
-                vitae imperdiet mauris. Fusce ultricies, dui id vestibulum bibendum, erat neque imperdiet purus, ac
-                gravida
-                dolor
-                quam hendrerit ex. Quisque sit amet tincidunt odio, eu vestibulum mi. Nulla facilisi. Ut non erat
-                elementum,
-                accumsan nisi ut, viverra dolor.</p>
-
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-            </ul>
-
-            <img src="<?php echo INCLUDE_PATH ?>images/bg-form.jpg" alt="">
 
         </article>
     </div>
