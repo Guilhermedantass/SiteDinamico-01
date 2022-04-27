@@ -25,6 +25,10 @@ Aqui estão as tecnologias usadas neste projeto.
 
 * JQuery
 
+## css
+
+* fontAwesome
+
 
 ### 1 - Ao acessar, você verá a página inicial 
 
