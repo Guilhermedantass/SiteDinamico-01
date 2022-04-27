@@ -1,9 +1,9 @@
-![Logo of the project](https://github.com/Lucasdfg07/Blog_Lucas_Fernandes/blob/master/app/assets/images/logo.png)
 
 
-## Projeto - Site Dinamico 01
+## Projeto - Site institucional simples
 Esse é o meu primeiro projeto \o/ 
-Enjoy It and I hope you can learn a lot!
+
+Exemplo de um simples site institucional, mas bem completo e com painel administrativo!
 
 
 ## Tecnologias 
