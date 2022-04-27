@@ -101,6 +101,12 @@ As principais funcionalidades do aplicativo são:
  - Ler muitas informações, sobre o/a profissional/empresa, depoimentos, serviços e noticias.
  - Enviar mensagem de contato :D
 
+Funcionalidades do painel são:
+
+ - Cadastrar e gerenciar depoimentos, serviços, noticias e categorias que apareceram no site
+ - Cadastrar novos usuários.
+ - Visualizar as mensagem envidas pelos clientes
+
 
 
 ## Links
