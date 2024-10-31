@@ -1,7 +1,7 @@
 
 
-## Projeto - Site institucional simples
-Esse é o meu primeiro projeto \o/ 
+## Projeto - Site institucional
+Esse é o meu novo projeto \o/ 
 
 Exemplo de um simples site institucional, mas bem completo e com painel administrativo!
 
